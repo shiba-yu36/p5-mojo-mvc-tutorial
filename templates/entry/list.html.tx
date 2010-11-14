@@ -1,0 +1,4 @@
+<h1>エントリーリスト</h1>
+: for $entries -> $entry {
+    <: $entry.title :>
+: }
