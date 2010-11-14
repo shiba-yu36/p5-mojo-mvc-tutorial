@@ -14,6 +14,9 @@ sub startup {
 
     # Default route
     $r->route('/:controller/:action/:id')->to('example#welcome', id => 1);
+
+    # use Xslate
+    $self->plugin('xslate_renderer');
 }
 
 1;
