@@ -1,0 +1,14 @@
+<h1>エントリー新規作成</h1>
+<form action="/entry/post" method="POST">
+  <table>
+    <tr>
+      <th>タイトル</th>
+      <td><input name="title" /></td>
+    </tr>
+    <tr>
+      <th>内容</th>
+      <td><textarea name="body"></textarea></td>
+    </tr>
+  </table>
+  <input type="submit" value="save" />
+</form>

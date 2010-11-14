@@ -1,4 +1,15 @@
 <h1>エントリーリスト</h1>
+<table>
+  <tr>
+    <th>id</th>
+    <th>title</th>
+    <th>body</th>
+  </tr>
 : for $entries -> $entry {
-    <: $entry.title :>
+  <tr>
+    <td><: $entry.id :></td>
+    <td><: $entry.title :></td>
+    <td><: $entry.body :></td>
+  </tr>
 : }
+</table>
