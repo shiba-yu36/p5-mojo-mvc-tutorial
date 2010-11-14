@@ -1,15 +1,15 @@
-package MojoMvcTutorial::Example;
+package MojoMvcTutorial::Controller::Example;
 
 use strict;
 use warnings;
 
-use base 'Mojolicious::Controller';
+use base 'MojoMvcTutorial::Controller';
 
 # This action will render a template
 sub welcome {
     my $self = shift;
 
-    # Render template "example/welcome.html.ep" with message
+    # Render template "example/welcome.html.tx" with message
     $self->render(message => 'Welcome to the Mojolicious Web Framework!');
 }
 

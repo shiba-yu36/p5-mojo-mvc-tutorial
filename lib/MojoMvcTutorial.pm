@@ -12,6 +12,9 @@ sub startup {
     # Routes
     my $r = $self->routes;
 
+    # namespace
+    $r->namespace('MojoMvcTutorial::Controller');
+
     # Default route
     $r->route('/:controller/:action/:id')->to('example#welcome', id => 1);
 
