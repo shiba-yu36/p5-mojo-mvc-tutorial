@@ -5,6 +5,10 @@ use warnings;
 
 use base 'Mojolicious';
 
+use HTML::FillInForm::Lite qw(fillinform);
+use MojoX::Renderer::Xslate;
+use Text::Xslate qw(html_builder);
+
 # This method will run once at server start
 sub startup {
     my $self = shift;
@@ -19,7 +23,13 @@ sub startup {
     $r->route('/:controller/:action/:id')->to('example#welcome', id => 1);
 
     # use Xslate
-    $self->plugin('xslate_renderer');
+    my $xslate = MojoX::Renderer::Xslate->build(
+        mojo             => $self,
+        template_options => {
+            function => { fillinform => html_builder(\&fillinform) },
+        },
+    );
+    $self->renderer->add_handler(tx => $xslate);
 }
 
 1;

@@ -21,6 +21,7 @@ sub list {
 
 sub new_entry {
     my $c = shift;
+    $c->render(q => {});
 }
 
 sub post {
@@ -38,7 +39,7 @@ sub post {
         return $c->render(
             template => 'entry/new_entry',
             result   => $result,
-            req      => $c->req,
+            q        => $c->req,
         );
     }
 
