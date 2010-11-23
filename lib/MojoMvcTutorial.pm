@@ -9,6 +9,8 @@ use HTML::FillInForm::Lite qw(fillinform);
 use MojoX::Renderer::Xslate;
 use Text::Xslate qw(html_builder);
 
+__PACKAGE__->attr(model => sub { MojoMvcTutorial::Model->new });
+
 # This method will run once at server start
 sub startup {
     my $self = shift;

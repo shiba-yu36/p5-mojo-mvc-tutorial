@@ -13,7 +13,7 @@ use FormValidator::Simple;
 sub list {
     my $c = shift;
 
-    my @entries = MojoMvcTutorial::Model->search('entry',{},{});
+    my @entries = $c->app->model->search('entry',{},{});
 
     # Render template "example/welcome.html.tx" with message
     $c->render(entries => \@entries);
@@ -43,7 +43,7 @@ sub post {
         );
     }
 
-    MojoMvcTutorial::Model->create('entry', {
+    $c->app->model->create('entry', {
         title => $c->param('title'),
         body  => $c->param('body'),
     });
