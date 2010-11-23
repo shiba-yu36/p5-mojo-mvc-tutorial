@@ -22,7 +22,7 @@ sub startup {
     $r->namespace('MojoMvcTutorial::Controller');
 
     # Default route
-    $r->route('/:controller/:action/:id')->to('example#welcome', id => 1);
+    $r->route('/:controller/:action/:id')->to('entry#list', id => 1);
 
     # use Xslate
     my $xslate = MojoX::Renderer::Xslate->build(
