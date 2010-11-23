@@ -1,4 +1,15 @@
 <h1>エントリー新規作成</h1>
+: if $result && $result.has_error {
+  <ul>
+:   for $result.error -> $key {
+:     for $result.error($key) -> $type {
+        <li>invalid: <: $key :> - <: $type :></li>
+:     }
+:   }
+  </ul>
+: }
+<div class="error">
+</div>
 : block form | fillinform($q) -> {
 <form action="/entry/post" method="POST">
   <table>
