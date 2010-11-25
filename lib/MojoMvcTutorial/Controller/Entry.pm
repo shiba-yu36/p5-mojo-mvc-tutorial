@@ -3,7 +3,7 @@ package MojoMvcTutorial::Controller::Entry;
 use strict;
 use warnings;
 
-use base 'MojoMvcTutorial::Controller';
+use base 'Mojolicious::Controller';
 
 use MojoMvcTutorial::Model;
 

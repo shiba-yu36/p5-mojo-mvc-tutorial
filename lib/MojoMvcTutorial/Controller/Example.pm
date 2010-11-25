@@ -3,7 +3,7 @@ package MojoMvcTutorial::Controller::Example;
 use strict;
 use warnings;
 
-use base 'MojoMvcTutorial::Controller';
+use base 'Mojolicious::Controller';
 
 # This action will render a template
 sub welcome {
