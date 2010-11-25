@@ -4,8 +4,8 @@ use warnings;
 
 use DBIx::Skinny connect_info => +{
     dsn => 'dbi:mysql:mojo_mvc_tutorial',
-    username => 'nobody',
-    password => 'nobody',
+    username => 'root',
+    password => '',
 };
 
 1;
