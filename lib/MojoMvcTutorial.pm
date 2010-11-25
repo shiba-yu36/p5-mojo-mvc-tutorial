@@ -8,6 +8,7 @@ use base 'Mojolicious';
 use HTML::FillInForm::Lite qw(fillinform);
 use MojoX::Renderer::Xslate;
 use Text::Xslate qw(html_builder);
+use MojoMvcTutorial::Model;
 
 __PACKAGE__->attr(model => sub { MojoMvcTutorial::Model->new });
 

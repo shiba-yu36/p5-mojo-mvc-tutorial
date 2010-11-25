@@ -5,8 +5,6 @@ use warnings;
 
 use base 'Mojolicious::Controller';
 
-use MojoMvcTutorial::Model;
-
 use FormValidator::Simple;
 
 # This action will render a template
