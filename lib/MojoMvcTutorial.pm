@@ -20,7 +20,7 @@ sub startup {
     my $r = $self->routes;
 
     # namespace
-    $r->namespace('MojoMvcTutorial::Controller');
+    $r->namespaces(['MojoMvcTutorial::Controller']);
 
     # Default route
     $r->route('/:controller/:action/:id')->to('entry#list', id => 1);
